@@ -64,7 +64,7 @@ class Rule implements Proposition
                 throw new \LogicException('Rule actions must be callable.');
             }
 
-            call_user_func($this->action);
+            call_user_func($this->action, $context);
         }
     }
 }
